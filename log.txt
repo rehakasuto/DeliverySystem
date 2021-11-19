@@ -1,0 +1,165 @@
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/authenticate => 400
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/partners/register => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/partners/register => 400
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/users/register => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/partners/authenticate => 400
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/users/authenticate => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Error | Event ID : 1 | Event Name : UnhandledException | Formatter : An unhandled exception has occurred while executing the request.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 500
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Error | Event ID : 1 | Event Name : UnhandledException | Formatter : An unhandled exception has occurred while executing the request.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 500
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/swagger-ui-standalone-preset.js => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/swagger-ui.css => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/swagger-ui-bundle.js => 200
+Log Level : Error | Event ID : 1 | Event Name : UnhandledException | Formatter : An unhandled exception has occurred while executing the request.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/favicon-32x32.png => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 500
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 401
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/users/authenticate => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 401
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 401
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 401
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 401
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 401
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 401
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/users/authenticate => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 401
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/users/authenticate => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 401
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/users/authenticate => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/users/authenticate => 200
+Log Level : Error | Event ID : 1 | Event Name : UnhandledException | Formatter : An unhandled exception has occurred while executing the request.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 500
+Log Level : Error | Event ID : 1 | Event Name : UnhandledException | Formatter : An unhandled exception has occurred while executing the request.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 500
+Log Level : Error | Event ID : 1 | Event Name : UnhandledException | Formatter : An unhandled exception has occurred while executing the request.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 500
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/users/authenticate => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/users/authenticate => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /deliveries => 401
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request POST /accounts/users/authenticate => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Application started. Press Ctrl+C to shut down.
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Hosting environment: Development
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Content root path: C:\Users\RehaKasuto\Documents\Github\DeliverySystem.API
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/index.html => 200
+Log Level : Information | Event ID : 0 | Event Name :  | Formatter : Request GET /swagger/v1/swagger.json => 200

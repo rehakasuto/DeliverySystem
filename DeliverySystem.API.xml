@@ -1,0 +1,759 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DeliverySystem.API</name>
+    </assembly>
+    <members>
+        <member name="T:DeliverySystem.API.Controllers.AccountController">
+            <summary>
+            In this controller you can find all account actions
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.AccountController.#ctor(DeliverySystem.API.Services.Abstracts.IAccountService)">
+            <summary>
+            Injection of service layer
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.AccountController.AuthenticateUser(DeliverySystem.API.Models.RequestModels.AuthenticateRequest)">
+            <summary>
+            Login of user 
+            </summary>
+            <param name="model">
+            Email
+            Password
+            </param>
+            <returns>
+            Authenticated user object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.AccountController.AuthenticatePartner(DeliverySystem.API.Models.RequestModels.AuthenticateRequest)">
+            <summary>
+            Login of partner
+            </summary>
+            <param name="model">
+            Email
+            Password
+            </param>
+            <returns>
+            Authenticated partner object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.AccountController.RegisterUser(DeliverySystem.API.Models.RequestModels.UserRequest)">
+            <summary>
+            Signup of user
+            </summary>
+            <param name="model">
+            FirstName
+            LastName 
+            PhoneNumber
+            Address
+            Email
+            Password
+            </param>
+            <returns>
+            Registered user object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.AccountController.RegisterPartner(DeliverySystem.API.Models.RequestModels.PartnerRequest)">
+            <summary>
+            Signup of partner
+            </summary>
+            <param name="model">
+            Name
+            Description
+            Email
+            Password
+            </param>
+            <returns>
+            Registered partner object
+            </returns>
+        </member>
+        <member name="T:DeliverySystem.API.Controllers.DeliveryController">
+            <summary>
+            In this controller you can find all delivery CRUD actions
+            As you see I am using account for each methods to decompose partner and user behaviours
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.DeliveryController.#ctor(DeliverySystem.API.Services.Abstracts.IDeliveryService)">
+            <summary>
+            Injection of service layer
+            </summary>
+            <param name="deliveryService"></param>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.DeliveryController.Create(DeliverySystem.API.Models.RequestModels.DeliveryRequest)">
+            <summary>
+            Generating delivery
+            If order not eixsts return 
+            Only partner can start this process
+            Create delivery action log in created state and partner identifier
+            </summary>
+            <param name="model">
+            OrderId
+            StartTime
+            EndTime
+            </param>
+            <returns>
+            Related delivery object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.DeliveryController.Update(DeliverySystem.API.Models.RequestModels.DeliveryRequest)">
+            <summary>
+            Updating the delivery
+            If delivery is not exists return
+            If end time of the delivery passed set state to expired
+            User can change the state to approved if delivery in created state
+            Partner can change the state to completed if delivery in approved state
+            All action store in delivery action table with given identifier and account identifier
+            </summary>
+            <param name="model">
+            DeliveryId
+            DeliveryState
+            </param>
+            <returns>
+            Related delivery object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.DeliveryController.Delete(System.Guid)">
+            <summary>
+            Cancelling the delivery
+            </summary>
+            <summary>
+            If delivery is not exists return
+            User or partner can do this action
+            This process can be valid if delivery only in approved or created states
+            Create delivery action log for user or partner and in cancelled state 
+            </summary>
+            <param name="id">
+            Identifier of the delivery
+            </param>
+            <returns>
+            Related delivery object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.DeliveryController.Get(System.Guid)">
+            <summary>
+            Getting related delivery by delivery id and user or partner info
+            </summary>
+            <param name="id">
+            Identifier of the delivery
+            </param>
+            <returns>
+            Related delivery object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Controllers.DeliveryController.GetAll">
+            <summary>
+            Getting all related deliveries by user or partner
+            </summary>
+            <returns>
+            List of delivery object
+            </returns>
+        </member>
+        <member name="T:DeliverySystem.API.Helpers.Enums.DeliveryState">
+            <summary>
+            Status of delivery
+            </summary>
+        </member>
+        <member name="F:DeliverySystem.API.Helpers.Enums.DeliveryState.created">
+            <summary>
+            Created by partner
+            </summary>
+        </member>
+        <member name="F:DeliverySystem.API.Helpers.Enums.DeliveryState.approved">
+            <summary>
+            Approved by user
+            </summary>
+        </member>
+        <member name="F:DeliverySystem.API.Helpers.Enums.DeliveryState.completed">
+            <summary>
+            Completed by user or partner
+            </summary>
+        </member>
+        <member name="F:DeliverySystem.API.Helpers.Enums.DeliveryState.cancelled">
+            <summary>
+            Cancelled by user or partner
+            </summary>
+        </member>
+        <member name="F:DeliverySystem.API.Helpers.Enums.DeliveryState.expired">
+            <summary>
+            Expired by date
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Helpers.Enums.AccountType">
+            <summary>
+            Type of authenticated accounts
+            </summary>
+        </member>
+        <member name="F:DeliverySystem.API.Helpers.Enums.AccountType.user">
+            <summary>
+            Customer
+            </summary>
+        </member>
+        <member name="F:DeliverySystem.API.Helpers.Enums.AccountType.partner">
+            <summary>
+            Seller
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Helpers.Jwt.AppSettings">
+            <summary>
+            Configuration of jwt 
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Helpers.Jwt.AppSettings.Secret">
+            <summary>
+            Secret token of jwt
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Models.Base">
+            <summary>
+            Store common properties of an object
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Models.Base.#ctor">
+            <summary>
+            Default value while creating a new object
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Base.Id">
+            <summary>
+            Identifier of an object
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Base.CreatedDate">
+            <summary>
+            Date of creation
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Base.ModifiedDate">
+            <summary>
+            Date of update
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Models.Delivery">
+            <summary>
+            Delivery object
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Delivery.OrderId">
+            <summary>
+            Order identifier of the delivery
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Delivery.Order">
+            <summary>
+            Order instance of the delivery
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Delivery.StartTime">
+            <summary>
+            Beggining of the delivery
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Delivery.EndTime">
+            <summary>
+            Estimated delivery date
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Delivery.State">
+            <summary>
+            Status of the delivery
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Models.DeliveryAction">
+            <summary>
+            This model store the action of delivery states
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.DeliveryAction.DeliveryId">
+            <summary>
+            Identifier of the delivery
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.DeliveryAction.PartnerId">
+            <summary>
+            Identifier of the Partner
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.DeliveryAction.UserId">
+            <summary>
+            Identifier of the User
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.DeliveryAction.DeliveryState">
+            <summary>
+            Status of the delivery
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Models.DeliveryContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{DeliverySystem.API.Models.DeliveryContext})">
+            <summary>
+            Sql Db connector
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="T:DeliverySystem.API.Models.IAccount">
+            <summary>
+            Logged in account info
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.IAccount.Email">
+            <summary>
+            The email of account
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.IAccount.Password">
+            <summary>
+            The password of account
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Models.Order">
+            <summary>
+            Order object
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Order.PartnerId">
+            <summary>
+            Supplier identifier of the order 
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Order.Partner">
+            <summary>
+            Supplier object of the order 
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Order.UserId">
+            <summary>
+            Customer identifier of the order 
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Order.User">
+            <summary>
+            Customer object of the order 
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Order.OrderItems">
+            <summary>
+            Order Item collection
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Models.OrderItem">
+            <summary>
+            Item of the order
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.OrderItem.OrderId">
+            <summary>
+            Order identifier
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.OrderItem.Order">
+            <summary>
+            Order object
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.OrderItem.ProductId">
+            <summary>
+            Product identifier of the order item
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.OrderItem.Product">
+            <summary>
+            Product object of the order item
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.OrderItem.Quantity">
+            <summary>
+            Quantity of the product order
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Models.Partner">
+            <summary>
+            The partner who deliver her/his product to customer
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Partner.Name">
+            <summary>
+            Name of the partner
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Partner.Description">
+            <summary>
+            Extra Info of the partner
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Partner.Orders">
+            <summary>
+            Delivered orders of the partner
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Partner.Email">
+            <summary>
+            Email info of the partner
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Partner.Password">
+            <summary>
+            Password of the partner
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Models.Product">
+            <summary>
+            The product of the stores
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Product.Name">
+            <summary>
+            Name of the product
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Product.UnitPrice">
+            <summary>
+            Unit price of the product
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.Product.Description">
+            <summary>
+            Extra detail of the product
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Models.User">
+            <summary>
+            The user who is the recipient
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.User.FirstName">
+            <summary>
+            First name of the recipient
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.User.LastName">
+            <summary>
+            Surname of the recipient
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.User.PhoneNumber">
+            <summary>
+            Mobile number of the recipient
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.User.Address">
+            <summary>
+            Delivery target location address of the recipient
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.User.Orders">
+            <summary>
+            Delivered orders of the recipient
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.User.Email">
+            <summary>
+            Email info of the partner
+            </summary>
+        </member>
+        <member name="P:DeliverySystem.API.Models.User.Password">
+            <summary>
+            Password of the partner
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Services.Abstracts.IAccountService">
+            <summary>
+            Interface of the service layer of accounts
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Abstracts.IAccountService.Authenticate(DeliverySystem.API.Models.RequestModels.AuthenticateRequest,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Login of account 
+            </summary>
+            <param name="model">
+            Email
+            Password
+            </param>
+            <param name="accountType">
+            Partner or user
+            </param>
+            <returns>
+            Authenticated account object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Abstracts.IAccountService.RegisterUser(DeliverySystem.API.Models.RequestModels.UserRequest)">
+            <summary>
+            Signup of user
+            </summary>
+            <param name="model">
+            FirstName
+            LastName 
+            PhoneNumber
+            Address
+            Email
+            Password
+            </param>
+            <returns>
+            Registered user object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Abstracts.IAccountService.RegisterPartner(DeliverySystem.API.Models.RequestModels.PartnerRequest)">
+            <summary>
+            Signup of partner
+            </summary>
+            <param name="model">
+            Name
+            Description
+            Email
+            Password
+            </param>
+            <returns>
+            Registered partner object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Abstracts.IAccountService.GetById(System.Guid)">
+            <summary>
+            Get account by account identifier
+            </summary>
+            <param name="Id">
+            Identifier of the account
+            </param>
+            <returns>
+            Authenticated account object
+            </returns>
+        </member>
+        <member name="T:DeliverySystem.API.Services.Abstracts.IDeliveryService">
+            <summary>
+            Interface of the service layer of deliveries
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Abstracts.IDeliveryService.GetAll(System.Guid,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Get deliveries by account
+            </summary>
+            <param name="accountId">
+            User or partner Identifier
+            </param>
+            <param name="accountType">
+            User or partner
+            </param>
+            <returns>
+            Delivery response object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Abstracts.IDeliveryService.GetById(System.Guid,System.Guid,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Get delivery by delivery identifier and account
+            </summary>
+            <param name="id">
+            Delivery Identifier
+            </param>
+            <param name="accountId">
+            User or partner Identifier
+            </param>
+            <param name="accountType">
+            User or partner
+            </param>
+            <returns>
+            Delivery response object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Abstracts.IDeliveryService.Create(DeliverySystem.API.Models.RequestModels.DeliveryRequest,System.Guid,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Generating delivery
+            If order not eixsts return 
+            Only partner can start this process
+            Create delivery action log in created state and partner identifier
+            </summary>
+            <returns>
+            Delivery response object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Abstracts.IDeliveryService.Update(DeliverySystem.API.Models.RequestModels.DeliveryRequest,System.Guid,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Updating the delivery
+            If delivery is not exists return
+            If end time of the delivery passed set state to expired
+            User can change the state to approved if delivery in created state
+            Partner can change the state to completed if delivery in approved state
+            All action store in delivery action table with given identifier and account identifier
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Abstracts.IDeliveryService.Delete(System.Guid,System.Guid,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Cancelling the delivery
+            If delivery is not exists return
+            User or partner can do this action
+            This process can be valid if delivery only in approved or created states
+            Create delivery action log for user or partner and in cancelled state 
+            </summary>
+        </member>
+        <member name="T:DeliverySystem.API.Services.Concretes.AccountService">
+            <summary>
+            Service of the account
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.AccountService.#ctor(Microsoft.Extensions.Options.IOptions{DeliverySystem.API.Helpers.Jwt.AppSettings},DeliverySystem.API.Models.DeliveryContext)">
+            <summary>
+            Service injection
+            </summary>
+            <param name="appSettings">
+            For jwt token settings
+            </param>
+            <param name="context">
+            Db context
+            </param>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.AccountService.Authenticate(DeliverySystem.API.Models.RequestModels.AuthenticateRequest,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Login of account 
+            </summary>
+            <param name="model">
+            Email
+            Password
+            </param>
+            <param name="accountType">
+            Partner or user
+            </param>
+            <returns>
+            Authenticated account object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.AccountService.GetById(System.Guid)">
+            <summary>
+            Get account by account identifier
+            </summary>
+            <param name="Id">
+            Identifier of the account
+            </param>
+            <returns>
+            Authenticated account object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.AccountService.RegisterPartner(DeliverySystem.API.Models.RequestModels.PartnerRequest)">
+            <summary>
+            Signup of partner
+            </summary>
+            <param name="model">
+            Name
+            Description
+            Email
+            Password
+            </param>
+            <returns>
+            Registered partner object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.AccountService.RegisterUser(DeliverySystem.API.Models.RequestModels.UserRequest)">
+            <summary>
+            Signup of user
+            </summary>
+            <param name="model">
+            FirstName
+            LastName 
+            PhoneNumber
+            Address
+            Email
+            Password
+            </param>
+            <returns>
+            Registered user object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.AccountService.generateJwtToken(DeliverySystem.API.Models.Base)">
+            <summary>
+            Generate token that is valid for 7 days
+            </summary>
+            <param name="account">
+            Related account (user or partner)
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:DeliverySystem.API.Services.Concretes.DeliveryService">
+            <summary>
+            Service of the delivery
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.DeliveryService.#ctor(DeliverySystem.API.Models.DeliveryContext)">
+            <summary>
+            Service injection
+            </summary>
+            <param name="context">
+            Db context
+            </param>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.DeliveryService.Create(DeliverySystem.API.Models.RequestModels.DeliveryRequest,System.Guid,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Generating delivery
+            If order not eixsts return 
+            Only partner can start this process
+            Create delivery action log in created state and partner identifier
+            </summary>
+            <returns>
+            Delivery response object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.DeliveryService.Update(DeliverySystem.API.Models.RequestModels.DeliveryRequest,System.Guid,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Updating the delivery
+            If delivery is not exists return
+            If end time of the delivery passed set state to expired
+            User can change the state to approved if delivery in created state
+            Partner can change the state to completed if delivery in approved state
+            All action store in delivery action table with given identifier and account identifier
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.DeliveryService.Delete(System.Guid,System.Guid,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Cancelling the delivery
+            If delivery is not exists return
+            User or partner can do this action
+            This process can be valid if delivery only in approved or created states
+            Create delivery action log for user or partner and in cancelled state 
+            </summary>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.DeliveryService.GetAll(System.Guid,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Get deliveries by account
+            </summary>
+            <param name="accountId">
+            User or partner Identifier
+            </param>
+            <param name="accountType">
+            User or partner
+            </param>
+            <returns>
+            Delivery response object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.DeliveryService.GetById(System.Guid,System.Guid,DeliverySystem.API.Helpers.Enums.AccountType)">
+            <summary>
+            Get delivery by delivery identifier and account
+            </summary>
+            <param name="id">
+            Delivery Identifier
+            </param>
+            <param name="accountId">
+            User or partner Identifier
+            </param>
+            <param name="accountType">
+            User or partner
+            </param>
+            <returns>
+            Delivery response object
+            </returns>
+        </member>
+        <member name="M:DeliverySystem.API.Services.Concretes.DeliveryService.MapToDeliveryResponse(DeliverySystem.API.Models.Delivery)">
+            <summary>
+            Convert delivery to delivery response
+            </summary>
+            <param name="delivery"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AuthorizeAttribute">
+            <summary>
+            Authorization attribute
+            </summary>
+        </member>
+        <member name="M:AuthorizeAttribute.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            Check account valid with given jwt
+            </summary>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>
